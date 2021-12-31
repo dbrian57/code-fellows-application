@@ -59,9 +59,7 @@ document.querySelector('#clear')?.addEventListener('click', () => {
 
 
 
-/* Things still to do: 
+/* Things still to do:
 1) Capture button (key) `id` on click as a variable and insert it into synth trigger
 2) Make a PLAY button that works (need to add a delay function to this)
 */
-
-

@@ -5,16 +5,16 @@
     <link rel="shortcut icon" href="#">
     <!-- This is here to avoid a testing environment error for favicons.ico. REMOVE BEFORE PRODUCTION -->
     <script src="./tone/build/tone.js"></script>
-    <script 
+    <script
         loadSynth => {
           await window.Tone.start();
           synth.triggerAttackRelease("C4");
         }
         onload="loadSynth"></script>
-    <script type="module" src="synth.mjs"></script>
+    <script type="module" src="/src/synth.mjs"></script>
   </head>
   <body>
-    
+
     <h1>Simple Synth</h1>
     <button class="key" id="C4">C4</button>
     <button class="key" id="A5">A5</button>
