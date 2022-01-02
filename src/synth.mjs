@@ -1,4 +1,4 @@
-import * as Tone from './tone/build/tone.js'
+import * as Tone from './tone.js'
 
 let song = []
 
