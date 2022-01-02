@@ -3,22 +3,23 @@
   <head>
     <title>Dead Simple Synth</title>
     <link rel="shortcut icon" href="#">
-    <link rel="stylesheet" href="/src/style.css">
-    <!-- This is here to avoid a testing environment error for favicons.ico. REMOVE BEFORE PRODUCTION -->
-    <script src="./src/tone/build/tone.js"></script>
+    <link rel="stylesheet" href="/src/styles/style.css">
+    <!-- This is here to avoid a testing environment error for favicons.ico. REMOVE BEFORE PRODUCTION
+    <script src="./src/scripts/tone/build/tone.js"></script>
     <script
         loadSynth => {
           await window.Tone.start();
           synth.triggerAttackRelease("C4");
         }
         onload="loadSynth"></script>
-    <script type="module" src="/src/synth.mjs"></script>
+      -->
+    <script type="module" src="/src/scripts/synth.mjs"></script>
   </head>
   <body>
     <div id="keyboard">
       <h1>dead simple synth</h1>
       <div id="synthBg">
-        <img src="synth.png" />
+        <img src="/src/images/synth.png" />
         <div id="synthScreen"></div>
         <button id="playBack"></button>
         <button id="clear"></button>
