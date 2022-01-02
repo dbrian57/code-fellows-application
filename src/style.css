@@ -1,3 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  position: absolute;
+  top: 0px;
+  font-family: impact;
+  font-size: 80px;
+  padding: 0px;
+}
+
+#keyboard {
+  margin-left: 25px;
+}
 .naturalSpace {
   padding: 24px;
   border: 0px;
@@ -62,6 +78,7 @@ button:active {
   z-index: 11;
   overflow: scroll;
   word-wrap: break-word;
+  font-family: arial;
 }
 
 #playBack {
@@ -107,13 +124,15 @@ button:active {
 
 .synthOptionsSpace {
   padding-right: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 7px;
   font-family: impact;
   font-size: 14px;
 }
 
 .synthButton {
   background-color: transparent;
+  height: 25px;
+  width: 25px;
   border-radius: 50%
 }
 

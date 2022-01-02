@@ -12,16 +12,13 @@ const timer = ms => new Promise(res => setTimeout(res, ms))
 
 document.querySelector('#Poly')?.addEventListener('click', async () => {
 	synth = new window.Tone.PolySynth().connect(crusher);
-//	element.classList.add("selected");
-	(this).addClass("selected");
+	document.getElementById("#Poly").style.display = ".selected";
+//  element.classList.add("selected");
+//	(this).addClass("selected");
 })
 
 document.querySelector('#Duo')?.addEventListener('click', async () => {
 	synth = new window.Tone.DuoSynth().connect(crusher);
-})
-
-document.querySelector('#AM')?.addEventListener('click', async () => {
-	synth = new window.Tone.AMSynth().connect(crusher);
 })
 
 document.querySelector('#Metal')?.addEventListener('click', async () => {
@@ -30,10 +27,6 @@ document.querySelector('#Metal')?.addEventListener('click', async () => {
 
 document.querySelector('#FM')?.addEventListener('click', async () => {
 	synth = new window.Tone.FMSynth().connect(crusher);
-})
-
-document.querySelector('#Pluck')?.addEventListener('click', async () => {
-	synth = new window.Tone.PluckSynth().connect(crusher);
 })
 
 
@@ -58,7 +51,7 @@ document.querySelectorAll('.accidental').forEach(btn=>btn.addEventListener('clic
 	synth.triggerAttackRelease(note, "8n");
 	song.push(note);
 	console.log(song);
-	document.getElementById('screen').innerHTML = song;
+	document.getElementById('synthScreen').innerHTML = song;
 }))
 
 /*
