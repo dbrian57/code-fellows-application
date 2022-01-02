@@ -1,0 +1,44 @@
+td {
+  padding: 25px;
+}
+
+.natural {
+  background-color: orange;
+  width: 48px;
+  height: 300px;
+  position: absolute;
+  top: 248px;
+  border: 0px;
+}
+
+#naturals {
+  margin-left: 24px;
+}
+
+.accidental {
+  background-color: black;
+  width: 24px;
+  height: 200px;
+  border: 0px;
+  position: absolute;
+  position: absolute;
+  top: 248px;
+  z-index: 10;
+
+}
+
+#accidentals {
+  margin-left: 63px;
+}
+
+#spacer {
+  z-index: 1;
+}
+#synthBg {
+  position: relative;
+}
+
+#synthScreen {
+  position: absolute;
+  z-index: 11;
+}

@@ -3,6 +3,7 @@
   <head>
     <title>Dan's Synth</title>
     <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="/src/style.css">
     <!-- This is here to avoid a testing environment error for favicons.ico. REMOVE BEFORE PRODUCTION -->
     <script src="./src/tone/build/tone.js"></script>
     <script
@@ -16,12 +17,77 @@
   <body>
 
     <h1>Simple Synth</h1>
-    <button class="key" id="C4">C4</button>
-    <button class="key" id="A5">A5</button>
-    <button class="key" id="C5">C5</button>
     <header>Your song</header>
     <div id="screen"></div>
     <button id="play">Play Song</button>
     <button id="clear">Clear Song</button>
+    <h2>Select Synth Type</h2>
+    <button id="Poly">Poly Synth</button>
+    <button id="Duo">Duo Synth</button>
+    <button id="Metal">Metal Synth</button>
+    <button id="AM">AM Synth</button>
+    <button id="FM">FM Synth</button>
+    <button id="Pluck">Pluck Synth</button>
+    <keyboard>
+      <div id="synthBg">
+        <img src="synth.png" />
+        <div id="synthScreen">
+        </div>
+        <div id="keyboard">
+          <table id="naturals">
+            <tr>
+              <td><button class="natural" id="C3"></button></td>
+              <td><button class="natural" id="D3"></button></td>
+              <td><button class="natural" id="E3"></button></td>
+              <td><button class="natural" id="F3"></button></td>
+              <td><button class="natural" id="G3"></button></td>
+              <td><button class="natural" id="A3"></button></td>
+              <td><button class="natural" id="B3"></button></td>
+              <!-- Second Octave -->
+              <td><button class="natural" id="C4"></button></td>
+              <td><button class="natural" id="D4"></button></td>
+              <td><button class="natural" id="E4"></button></td>
+              <td><button class="natural" id="F4"></button></td>
+              <td><button class="natural" id="G4"></button></td>
+              <td><button class="natural" id="A4"></button></td>
+              <td><button class="natural" id="B4"></button></td>
+              <!-- Third Octave -->
+              <td><button class="natural" id="C5"></button></td>
+              <td><button class="natural" id="D5"></button></td>
+              <td><button class="natural" id="E5"></button></td>
+              <td><button class="natural" id="F5"></button></td>
+              <td><button class="natural" id="G5"></button></td>
+              <td><button class="natural" id="A5"></button></td>
+              <td><button class="natural" id="B5"></button></td>
+        </table>
+        <table id="accidentals">
+          <tr>
+            <td><button class="accidental" id="C#3"></button></td>
+            <td><button class="accidental" id="D#3"></button></td>
+            <td></td>
+            <td><button class="accidental" id="F#3"></button></td>
+            <td><button class="accidental" id="G#3"></button></td>
+            <td><button class="accidental" id="A#3"></button></td>
+            <td></td>
+            <!-- second octave -->
+            <td><button class="accidental" id="C#4"></button></td>
+            <td><button class="accidental" id="D#4"></button></td>
+            <td></td>
+            <td><button class="accidental" id="F#4"></button></td>
+            <td><button class="accidental" id="G#4"></button></td>
+            <td><button class="accidental" id="A#4"></button></td>
+            <td></td>
+            <!-- third octave -->
+            <td><button class="accidental" id="C#5"></button></td>
+            <td><button class="accidental" id="D#5"></button></td>
+            <td></td>
+            <td><button class="accidental" id="F#5"></button></td>
+            <td><button class="accidental" id="G#5"></button></td>
+            <td><button class="accidental" id="A#5"></button></td>
+            <td></td>
+          </tr>
+      </div>
+      </div>
+    </keyboard>
   </body>
 </html>
