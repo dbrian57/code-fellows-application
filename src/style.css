@@ -1,10 +1,25 @@
-td {
-  padding: 25px;
+.naturalSpace {
+  padding: 24px;
+  border: 0px;
+}
+
+.accidentalSpace {
+  padding: 24px;
+  border: 0px;
+}
+
+button:active {
+  background: rgba(234, 45, 98, 0.33);
+
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
 }
 
 .natural {
-  background-color: orange;
-  width: 48px;
+  background-color: transparent;
+  width: 50px;
   height: 300px;
   position: absolute;
   top: 248px;
@@ -12,15 +27,15 @@ td {
 }
 
 #naturals {
-  margin-left: 24px;
+  margin-left: 25px;
+
 }
 
 .accidental {
-  background-color: black;
-  width: 24px;
-  height: 200px;
+  background-color: transparent;
+  width: 25px;
+  height: 175px;
   border: 0px;
-  position: absolute;
   position: absolute;
   top: 248px;
   z-index: 10;
@@ -40,5 +55,69 @@ td {
 
 #synthScreen {
   position: absolute;
+  top: 115px;
+  left: 250px;
+  height: 110px;
+  width: 220px;
   z-index: 11;
+  overflow: scroll;
+  word-wrap: break-word;
 }
+
+#playBack {
+  position: absolute;
+  top: 100px;
+  left: 495px;
+  height: 35px;
+  width: 35px;
+  background-color: transparent;
+  border: 0px;
+}
+
+#clear {
+  shape: circle;
+  position: absolute;
+  top: 191px;
+  left: 495px;
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  border: 4px;
+  border-radius: 50%;
+
+}
+
+#playClear {
+    position: absolute;
+    top: 95px;
+    left: 535px;
+}
+
+.playClearSpace {
+  padding: 8px;
+  font-family: impact;
+  font-size: 30px;
+}
+
+#synthOptions {
+  position: absolute;
+  top: 103px;
+  left: 698px;
+}
+
+.synthOptionsSpace {
+  padding-right: 15px;
+  padding-bottom: 10px;
+  font-family: impact;
+  font-size: 14px;
+}
+
+.synthButton {
+  background-color: transparent;
+  border-radius: 50%
+}
+
+.selected {
+  background-color: rgba(252, 186, 3, 0.75);
+}
+/* keys 1050 width, 1150 total

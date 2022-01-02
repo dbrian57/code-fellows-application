@@ -18,73 +18,105 @@
 
     <h1>Simple Synth</h1>
     <header>Your song</header>
-    <div id="screen"></div>
-    <button id="play">Play Song</button>
-    <button id="clear">Clear Song</button>
+    <button id="playTest">Play Song</button>
+    <button id="clearTest">Clear Song</button>
     <h2>Select Synth Type</h2>
-    <button id="Poly">Poly Synth</button>
-    <button id="Duo">Duo Synth</button>
-    <button id="Metal">Metal Synth</button>
-    <button id="AM">AM Synth</button>
-    <button id="FM">FM Synth</button>
-    <button id="Pluck">Pluck Synth</button>
+    <button id="PolyTest">Poly Synth</button>
+    <button id="DuoTest">Duo Synth</button>
+    <button id="MetalTest">Metal Synth</button>
+    <button id="AMTest">AM Synth</button>
+    <button id="FMTest">FM Synth</button>
+    <button id="PluckTest">Pluck Synth</button>
     <keyboard>
       <div id="synthBg">
         <img src="synth.png" />
-        <div id="synthScreen">
-        </div>
+        <div id="synthScreen"></div>
+        <button id="playBack"></button>
+        <button id="clear"></button>
+        <table id="playClear">
+          <tr>
+            <td class="playClearSpace" id="playCopy">PLAY BACK</td>
+          </tr>
+          <tr>
+            <td class="playClearSpace" id="clearCopy"></td>
+          </tr>
+          <tr>
+            <td class="playClearSpace" id="clearCopy"></td>
+          </tr>
+          <tr>
+            <td class="playClearSpace" id="clearCopy">CLEAR</td>
+          </tr>
+        </table>
+        <table id="synthOptions">
+          <tr>
+            <td class="synthOptionsSpace"><button class="synthButton" id="Poly">X</button></td>
+            <td class="synthOptionsSpace">poly synth</td>
+          </tr>
+          <tr>
+            <td class="synthOptionsSpace"><button class="synthButton" id="Duo">X</button></td>
+            <td class="synthOptionsSpace">duo synth</td>
+          </tr>
+          <tr>
+            <td class="synthOptionsSpace"><button class="synthButton" id="Metal">X</button></td>
+            <td class="synthOptionsSpace">metal synth</td>
+          </tr>
+          <tr>
+            <td class="synthOptionsSpace"><button class="synthButton" id="FM">X</button></td>
+            <td class="synthOptionsSpace">FM synth</td>
+          </tr>
+
         <div id="keyboard">
           <table id="naturals">
             <tr>
-              <td><button class="natural" id="C3"></button></td>
-              <td><button class="natural" id="D3"></button></td>
-              <td><button class="natural" id="E3"></button></td>
-              <td><button class="natural" id="F3"></button></td>
-              <td><button class="natural" id="G3"></button></td>
-              <td><button class="natural" id="A3"></button></td>
-              <td><button class="natural" id="B3"></button></td>
+              <td class="naturalSpace"><button class="natural" id="C3"></button></td>
+              <td class="naturalSpace"><button class="natural" id="D3"></button></td>
+              <td class="naturalSpace"><button class="natural" id="E3"></button></td>
+              <td class="naturalSpace"><button class="natural" id="F3"></button></td>
+              <td class="naturalSpace"><button class="natural" id="G3"></button></td>
+              <td class="naturalSpace"><button class="natural" id="A3"></button></td>
+              <td class="naturalSpace"><button class="natural" id="B3"></button></td>
               <!-- Second Octave -->
-              <td><button class="natural" id="C4"></button></td>
-              <td><button class="natural" id="D4"></button></td>
-              <td><button class="natural" id="E4"></button></td>
-              <td><button class="natural" id="F4"></button></td>
-              <td><button class="natural" id="G4"></button></td>
-              <td><button class="natural" id="A4"></button></td>
-              <td><button class="natural" id="B4"></button></td>
+              <td class="naturalSpace"><button class="natural" id="C4"></button></td>
+              <td class="naturalSpace"><button class="natural" id="D4"></button></td>
+              <td class="naturalSpace"><button class="natural" id="E4"></button></td>
+              <td class="naturalSpace"><button class="natural" id="F4"></button></td>
+              <td class="naturalSpace"><button class="natural" id="G4"></button></td>
+              <td class="naturalSpace"><button class="natural" id="A4"></button></td>
+              <td class="naturalSpace"><button class="natural" id="B4"></button></td>
               <!-- Third Octave -->
-              <td><button class="natural" id="C5"></button></td>
-              <td><button class="natural" id="D5"></button></td>
-              <td><button class="natural" id="E5"></button></td>
-              <td><button class="natural" id="F5"></button></td>
-              <td><button class="natural" id="G5"></button></td>
-              <td><button class="natural" id="A5"></button></td>
-              <td><button class="natural" id="B5"></button></td>
+              <td class="naturalSpace"><button class="natural" id="C5"></button></td>
+              <td class="naturalSpace"><button class="natural" id="D5"></button></td>
+              <td class="naturalSpace"><button class="natural" id="E5"></button></td>
+              <td class="naturalSpace"><button class="natural" id="F5"></button></td>
+              <td class="naturalSpace"><button class="natural" id="G5"></button></td>
+              <td class="naturalSpace"><button class="natural" id="A5"></button></td>
+              <td class="naturalSpace"><button class="natural" id="B5"></button></td>
         </table>
         <table id="accidentals">
           <tr>
-            <td><button class="accidental" id="C#3"></button></td>
-            <td><button class="accidental" id="D#3"></button></td>
-            <td></td>
-            <td><button class="accidental" id="F#3"></button></td>
-            <td><button class="accidental" id="G#3"></button></td>
-            <td><button class="accidental" id="A#3"></button></td>
-            <td></td>
+            <td class="accidentalSpace"><button class="accidental" id="C#3"></button></td>
+            <td class="accidentalSpace"><button class="accidental" id="D#3"></button></td>
+            <td class="accidentalSpace"></td>
+            <td class="accidentalSpace"><button class="accidental" id="F#3"></button></td>
+            <td class="accidentalSpace"><button class="accidental" id="G#3"></button></td>
+            <td class="accidentalSpace"><button class="accidental" id="A#3"></button></td>
+            <td class="accidentalSpace"></td>
             <!-- second octave -->
-            <td><button class="accidental" id="C#4"></button></td>
-            <td><button class="accidental" id="D#4"></button></td>
-            <td></td>
-            <td><button class="accidental" id="F#4"></button></td>
-            <td><button class="accidental" id="G#4"></button></td>
-            <td><button class="accidental" id="A#4"></button></td>
-            <td></td>
+            <td class="accidentalSpace"><button class="accidental" id="C#4"></button></td>
+            <td class="accidentalSpace"><button class="accidental" id="D#4"></button></td>
+            <td class="accidentalSpace"></td>
+            <td class="accidentalSpace"><button class="accidental" id="F#4"></button></td>
+            <td class="accidentalSpace"><button class="accidental" id="G#4"></button></td>
+            <td class="accidentalSpace"><button class="accidental" id="A#4"></button></td>
+            <td class="accidentalSpace"></td>
             <!-- third octave -->
-            <td><button class="accidental" id="C#5"></button></td>
-            <td><button class="accidental" id="D#5"></button></td>
-            <td></td>
-            <td><button class="accidental" id="F#5"></button></td>
-            <td><button class="accidental" id="G#5"></button></td>
-            <td><button class="accidental" id="A#5"></button></td>
-            <td></td>
+            <td class="accidentalSpace"><button class="accidental" id="C#5"></button></td>
+            <td class="accidentalSpace"><button class="accidental" id="D#5"></button></td>
+            <td class="accidentalSpace"></td>
+            <td class="accidentalSpace"><button class="accidental" id="F#5"></button></td>
+            <td class="accidentalSpace"><button class="accidental" id="G#5"></button></td>
+            <td class="accidentalSpace"><button class="accidental" id="A#5"></button></td>
+            <td class="accidentalSpace"></td>
           </tr>
       </div>
       </div>
