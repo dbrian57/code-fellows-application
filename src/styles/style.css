@@ -3,10 +3,15 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: custom;
+  src: url(/src/styles/impact.ttf) format('truetype');
+}
+
 h1 {
   position: absolute;
   top: 0px;
-  font-family: impact;
+  font-family: custom;
   font-size: 80px;
   padding: 0px;
 }
@@ -136,7 +141,7 @@ button:active {
 
 .playClearSpace {
   padding: 8px;
-  font-family: impact;
+  font-family: custom;
   font-size: 30px;
 }
 
@@ -149,7 +154,7 @@ button:active {
 .synthOptionsSpace {
   padding-right: 15px;
   padding-bottom: 7px;
-  font-family: impact;
+  font-family: custom;
   font-size: 14px;
 }
 
