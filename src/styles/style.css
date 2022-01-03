@@ -11,6 +11,29 @@ h1 {
   padding: 0px;
 }
 
+#glowing-eyes {
+  position: absolute;
+  top: 152px;
+  left: 970px;
+  animation-duration: 4s;
+  animation-name: glow;
+  animation-iteration-count: infinite;
+}
+
+@keyframes glow {
+  from {
+    opacity: 0%;
+  }
+  
+  50% {
+    opacity: 100%;
+  }
+
+  to {
+    opacity: 0%;
+  }
+}
+
 #keyboard {
   margin-left: 25px;
 }
@@ -79,6 +102,7 @@ button:active {
   overflow: scroll;
   word-wrap: break-word;
   font-family: arial;
+  line-height: 30px;
 }
 
 #playBack {
@@ -138,5 +162,43 @@ button:active {
 
 .selected {
   background-color: rgba(252, 186, 3, 0.75);
+}
+
+#how-to {
+  width: 1150px;
+  margin-left: 288px;
+}
+
+h2 {
+  width: 600px;
+  font-family: impact;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+p {
+  width: 600px;
+  font-family: helvetica;
+  line-height: 20px;
+  text-align: justify;
+}
+
+#footer{ 
+  width: 1150px;
+  background-color: #AF1E0E;
+}
+
+.footerSpace {
+  padding: 15px;
+  width: 575px;
+  text-align: center;
+  font-family: impact;
+  font-size: 20px;
+  color: black;
+}
+
+.footerLinks {
+  color: white;
+  text-decoration: none;
 }
 /* keys 1050 width, 1150 total
