@@ -12,9 +12,6 @@ const timer = ms => new Promise(res => setTimeout(res, ms))
 
 document.querySelector('#Poly')?.addEventListener('click', async () => {
 	synth = new window.Tone.PolySynth().connect(crusher);
-	document.getElementById("#Poly").style.display = ".selected";
-//  element.classList.add("selected");
-//	(this).addClass("selected");
 })
 
 document.querySelector('#Duo')?.addEventListener('click', async () => {

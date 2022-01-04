@@ -12,21 +12,43 @@ const timer = ms => new Promise(res => setTimeout(res, ms))
 
 document.querySelector('#Poly')?.addEventListener('click', async () => {
 	synth = new window.Tone.PolySynth().connect(crusher);
-	document.getElementById("#Poly").style.display = ".selected";
-//  element.classList.add("selected");
-//	(this).addClass("selected");
+	let x = document.getElementsByClassName("synthButton");
+	var i;
+	for (i = 0; i < x.length; i++) {
+	x[i].style.backgroundColor = "transparent";
+	}
+	document.querySelector('#Poly').style.backgroundColor = 'rgba(252, 186, 3, 0.75)';
 })
 
 document.querySelector('#Duo')?.addEventListener('click', async () => {
 	synth = new window.Tone.DuoSynth().connect(crusher);
+	let x = document.getElementsByClassName("synthButton");
+	var i;
+	for (i = 0; i < x.length; i++) {
+	x[i].style.backgroundColor = "transparent";
+	}
+	document.querySelector('#Duo').style.backgroundColor = 'rgba(252, 186, 3, 0.75)';
 })
 
 document.querySelector('#Metal')?.addEventListener('click', async () => {
 	synth = new window.Tone.MetalSynth().connect(crusher);
+	let x = document.getElementsByClassName("synthButton");
+	var i;
+	for (i = 0; i < x.length; i++) {
+	x[i].style.backgroundColor = "transparent";
+	}
+	document.querySelector('#Metal').style.backgroundColor = 'rgba(252, 186, 3, 0.75)';
 })
 
 document.querySelector('#FM')?.addEventListener('click', async () => {
 	synth = new window.Tone.FMSynth().connect(crusher);
+//	document.getElementsByClassName('.synthButton').style.backgroundColor = 'transparent';
+	let x = document.getElementsByClassName("synthButton");
+	var i;
+	for (i = 0; i < x.length; i++) {
+	x[i].style.backgroundColor = "transparent";
+	}
+	document.querySelector('#FM').style.backgroundColor = 'rgba(252, 186, 3, 0.75)';
 })
 
 
