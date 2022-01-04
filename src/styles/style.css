@@ -168,6 +168,10 @@ button:active {
   border-radius: 50%;
 }
 
+#Poly {
+  background-color: rgba(252, 186, 3, 0.75);
+}
+
 #how-to {
   width: 1150px;
   margin-left: 288px;
