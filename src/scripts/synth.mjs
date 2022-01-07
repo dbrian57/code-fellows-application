@@ -58,7 +58,6 @@ document.querySelectorAll('.natural').forEach(btn=>btn.addEventListener('click',
 	note = event.srcElement.id;
 	synth.triggerAttackRelease(note, "8n");
 	song.push(note);
-	console.log(song);
 	document.getElementById('synthScreen').innerHTML = song;
 }))
 
@@ -67,14 +66,12 @@ document.querySelectorAll('.accidental').forEach(btn=>btn.addEventListener('clic
 	note = event.srcElement.id;
 	synth.triggerAttackRelease(note, "8n");
 	song.push(note);
-	console.log(song);
 	document.getElementById('synthScreen').innerHTML = song;
 }))
 
 // Plays back the recorded notes
 document.querySelector('#playBack')?.addEventListener('click', async () => {
 	for (var i = 0; i < song.length; i++) {
-	    console.log(song[i]);
 			synth.triggerAttackRelease(song[i], "8n");
 	    await timer(500)
 	}
@@ -84,6 +81,5 @@ document.querySelector('#playBack')?.addEventListener('click', async () => {
 document.querySelector('#clear')?.addEventListener('click', () => {
 	song = []
 	document.getElementById('synthScreen').innerHTML = song
-	console.log(song)
 })
 
