@@ -15,6 +15,21 @@ h1 {
   padding: 0px;
 }
 
+h2 {
+  width: 600px;
+  font-family: impact;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+p {
+  width: 600px;
+  font-family: helvetica;
+  line-height: 20px;
+  text-align: justify;
+  padding-bottom: 10px;
+}
+
 #synthHeader {
   position: absolute;
 }
