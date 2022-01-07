@@ -7,9 +7,6 @@ let synth = new window.Tone.Synth().connect(crusher);
 
 const timer = ms => new Promise(res => setTimeout(res, ms))
 
-// await window.Tone.start();
-// synth.triggerAttackRelease("C4");
-
 document.querySelector('#Poly')?.addEventListener('click', async () => {
 	synth = new window.Tone.PolySynth().connect(crusher);
 	let x = document.getElementsByClassName("synthButton");
@@ -42,7 +39,6 @@ document.querySelector('#Metal')?.addEventListener('click', async () => {
 
 document.querySelector('#FM')?.addEventListener('click', async () => {
 	synth = new window.Tone.FMSynth().connect(crusher);
-//	document.getElementsByClassName('.synthButton').style.backgroundColor = 'transparent';
 	let x = document.getElementsByClassName("synthButton");
 	var i;
 	for (i = 0; i < x.length; i++) {
@@ -63,7 +59,6 @@ document.querySelectorAll('.natural').forEach(btn=>btn.addEventListener('click',
 	synth.triggerAttackRelease(note, "8n");
 	song.push(note);
 	console.log(song);
-//	document.getElementById('screen').innerHTML = song;
 	document.getElementById('synthScreen').innerHTML = song;
 }))
 
@@ -75,44 +70,6 @@ document.querySelectorAll('.accidental').forEach(btn=>btn.addEventListener('clic
 	console.log(song);
 	document.getElementById('synthScreen').innerHTML = song;
 }))
-
-/*
-document.querySelector("button")?.addEventListener('click', async () => {
-	let note = "id"
-	note = event.srcElement.id;
-	synth.triggerAttackRelease(note, "8n");
-	song.push(note);
-	console.log(song);
-	document.getElementById('screen').innerHTML = song;
-})
-*/
-
-/*
-document.querySelector('#C4')?.addEventListener('click', async () => {
-	await window.Tone.start()
-  synth.triggerAttackRelease("C4", "8n");
-  song.push("C4");
-  console.log(song);
-	document.getElementById('screen').innerHTML = song
-})
-
-document.querySelector('#A5')?.addEventListener('click', async () => {
-	await window.Tone.start()
-  synth.triggerAttackRelease("A5", "8n");
-  song.push("A5");
-  console.log(song);
-	document.getElementById('screen').innerHTML = song
-})
-
-document.querySelector('#C5')?.addEventListener('click', async () => {
-	await window.Tone.start()
-  synth.triggerAttackRelease("C5", "8n");
-  song.push("C5");
-  console.log(song);
-	document.getElementById('screen').innerHTML = song
-})
-
-*/
 
 // Plays back the recorded notes
 document.querySelector('#playBack')?.addEventListener('click', async () => {
@@ -130,10 +87,3 @@ document.querySelector('#clear')?.addEventListener('click', () => {
 	console.log(song)
 })
 
-/* TO DO:
-1) Make keys fit
-2) Add button copy for: play, clear, synths
-3) Make buttons/keys darkern or whatever upon click
-3) Make screen work and add overflow to interval
-4) Style header, write How-to/about @ bottom
-*/
