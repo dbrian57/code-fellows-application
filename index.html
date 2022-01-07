@@ -59,6 +59,7 @@
         <div id="keyboard">
           <table id="naturals">
             <tr>
+              <!-- First Octave -->
               <td class="naturalSpace"><button class="natural" id="C3"></button></td>
               <td class="naturalSpace"><button class="natural" id="D3"></button></td>
               <td class="naturalSpace"><button class="natural" id="E3"></button></td>
@@ -85,6 +86,7 @@
         </table>
         <table id="accidentals">
           <tr>
+            <!-- First Octave -->
             <td class="accidentalSpace"><button class="accidental" id="C#3"></button></td>
             <td class="accidentalSpace"><button class="accidental" id="D#3"></button></td>
             <td class="accidentalSpace"></td>
@@ -112,23 +114,35 @@
       </div>
       </div>
     </keyboard>
-    <div id="how-to">
+    <div class="explainer" id="how-to">
       <h2>How to Play</h2>
       <p><strong>dead simple synth</strong> is a simple synthesizer that generates audio using 
         the very excellent <a href="https://tonejs.github.io/">tone.js web audio framework</a>. </p>
-      </br>  
+
         <p>To begin playing, click on any of the keys on the keyboard. The synth captures the notes
         on its screen. If you add more notes than the screen can display, use the scroll bar on the 
         the side of the screen to review notes outside of the display area.</p>
-      </br>
+
         <p>Once you have played your notes, play the song you've created by clicking the 
         <strong>PLAY BACK</strong> button.</p>
-      </br>  
+
         <p>You can delete the song at anytime by clicking the <strong>CLEAR</strong> button.</p>
-      </br>
+
         <p>You can also select different types of synths: <strong>poly</strong>, <strong>duo</strong>, 
         <strong>metal</strong>, and <strong>FM</strong>.
     </div>
+    <div class="explainer" id="aboutNotes">
+      <h2>About the Notes on the Screen</h2>
+      
+      <p>When you click on a key, the synth displays the corresponding note on its screen with a number beside it, 
+        such as <strong>C4</strong>. The number beside each note specifies which octave, or pitch, the note was played in. A 
+        standard piano contains 77 keys devided into seven octaves. <strong>dead simple synth</strong> contains 
+        three octaves from the standard piano layout: three, four, and five.
+      
+      <p>For example, the fourth black key (known as a "sharp" or "accidental") from the left is a G sharp (#) note played 
+        played in the third octive.</p>
+    </div>
+
     <footer>
       <table id="footer">
         <tr>

@@ -16,6 +16,21 @@ h1 {
   padding: 0px;
 }
 
+h2 {
+  width: 600px;
+  font-family: impact;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+p {
+  width: 600px;
+  font-family: helvetica;
+  line-height: 20px;
+  text-align: justify;
+  padding-bottom: 10px;
+}
+
 #glowing-eyes {
   position: absolute;
   top: 152px;
@@ -172,24 +187,12 @@ button:active {
   background-color: rgba(252, 186, 3, 0.75);
 }
 
-#how-to {
+.explainer {
   width: 1150px;
   margin-left: 288px;
+  padding-bottom: 20px;
 }
 
-h2 {
-  width: 600px;
-  font-family: impact;
-  padding-bottom: 10px;
-  text-align: center;
-}
-
-p {
-  width: 600px;
-  font-family: helvetica;
-  line-height: 20px;
-  text-align: justify;
-}
 
 #footer{ 
   width: 1150px;
