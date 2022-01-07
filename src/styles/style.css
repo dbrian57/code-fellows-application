@@ -9,26 +9,18 @@
 }
 
 h1 {
-  position: absolute;
   top: 0px;
   font-family: custom;
   font-size: 80px;
   padding: 0px;
 }
 
-h2 {
-  width: 600px;
-  font-family: impact;
-  padding-bottom: 10px;
-  text-align: center;
+#synthHeader {
+  position: absolute;
 }
 
-p {
-  width: 600px;
-  font-family: helvetica;
-  line-height: 20px;
-  text-align: justify;
-  padding-bottom: 10px;
+#aboutHeader {
+  margin-left: 20px;
 }
 
 #glowing-eyes {
@@ -44,7 +36,7 @@ p {
   from {
     opacity: 0%;
   }
-  
+
   50% {
     opacity: 100%;
   }
@@ -194,7 +186,7 @@ button:active {
 }
 
 
-#footer{ 
+#footer{
   width: 1150px;
   background-color: #AF1E0E;
 }
@@ -212,4 +204,42 @@ button:active {
   color: white;
   text-decoration: none;
 }
-/* keys 1050 width, 1150 total
+
+#aboutSpace {
+  width: 600px;
+  height: 500px;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+#aboutPic {
+  top: 100px;
+}
+
+#aboutCopy {
+  top: 100px;
+}
+
+#projectSpace {
+  margin-left: 20px;
+  height: 600px;
+}
+
+ul {
+   list-style-position: inside;
+   font-family: helvetica;
+   line-height: 20px;
+}
+
+.listHeader {
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.lineItem {
+  padding-left: 10px;
+}
