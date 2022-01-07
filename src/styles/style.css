@@ -235,5 +235,24 @@ p {
   top: 100px;
 }
 
+#projectSpace {
+  margin-left: 20px;
+  height: 600px;
+}
 
+ul {
+   list-style-position: inside;
+   font-family: helvetica;
+   line-height: 20px;
+}
+
+.listHeader {
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.lineItem {
+  padding-left: 10px;
+}
 /* keys 1050 width, 1150 total
