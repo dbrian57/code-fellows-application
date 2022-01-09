@@ -10,7 +10,6 @@ if (localStorage.getItem("songStorage")) {
 } else {
     song = [];
 }
-console.log(song);
 
 
 const crusher = new window.Tone.BitCrusher(4).toDestination();
