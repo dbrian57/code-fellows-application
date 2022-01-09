@@ -98,4 +98,3 @@ document.querySelector('#clear').addEventListener('click', () => {
 
 let songStorage = document.getElementById('synthScreen').innerHTML
 songStorage = document.getElementById('synthScreen').innerHTML
-console.log(songStorage)
