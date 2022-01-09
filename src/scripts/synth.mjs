@@ -2,12 +2,23 @@ import * as Tone from '/src/scripts/tone.js'
 
 let song = []
 
+
+
+if (localStorage.getItem("songStorage")) {
+    song = JSON.parse(localStorage.getItem("songStorage"));
+		document.getElementById('synthScreen').innerHTML = song;
+} else {
+    song = [];
+}
+console.log(song);
+
+
 const crusher = new window.Tone.BitCrusher(4).toDestination();
 let synth = new window.Tone.Synth().connect(crusher);
 
 const timer = ms => new Promise(res => setTimeout(res, ms))
 
-document.querySelector('#Poly')?.addEventListener('click', async () => {
+document.querySelector('#Poly').addEventListener('click', async () => {
 	synth = new window.Tone.PolySynth().connect(crusher);
 	let x = document.getElementsByClassName("synthButton");
 	var i;
@@ -17,7 +28,7 @@ document.querySelector('#Poly')?.addEventListener('click', async () => {
 	document.querySelector('#Poly').style.backgroundColor = 'rgba(252, 186, 3, 0.75)';
 })
 
-document.querySelector('#Duo')?.addEventListener('click', async () => {
+document.querySelector('#Duo').addEventListener('click', async () => {
 	synth = new window.Tone.DuoSynth().connect(crusher);
 	let x = document.getElementsByClassName("synthButton");
 	var i;
@@ -27,7 +38,7 @@ document.querySelector('#Duo')?.addEventListener('click', async () => {
 	document.querySelector('#Duo').style.backgroundColor = 'rgba(252, 186, 3, 0.75)';
 })
 
-document.querySelector('#Metal')?.addEventListener('click', async () => {
+document.querySelector('#Metal').addEventListener('click', async () => {
 	synth = new window.Tone.MetalSynth().connect(crusher);
 	let x = document.getElementsByClassName("synthButton");
 	var i;
@@ -37,7 +48,7 @@ document.querySelector('#Metal')?.addEventListener('click', async () => {
 	document.querySelector('#Metal').style.backgroundColor = 'rgba(252, 186, 3, 0.75)';
 })
 
-document.querySelector('#FM')?.addEventListener('click', async () => {
+document.querySelector('#FM').addEventListener('click', async () => {
 	synth = new window.Tone.FMSynth().connect(crusher);
 	let x = document.getElementsByClassName("synthButton");
 	var i;
@@ -58,6 +69,7 @@ document.querySelectorAll('.natural').forEach(btn=>btn.addEventListener('click',
 	note = event.srcElement.id;
 	synth.triggerAttackRelease(note, "8n");
 	song.push(note);
+	localStorage.setItem("songStorage", JSON.stringify(song));
 	document.getElementById('synthScreen').innerHTML = song;
 }))
 
@@ -66,11 +78,12 @@ document.querySelectorAll('.accidental').forEach(btn=>btn.addEventListener('clic
 	note = event.srcElement.id;
 	synth.triggerAttackRelease(note, "8n");
 	song.push(note);
+	localStorage.setItem("songStorage", JSON.stringify(song));
 	document.getElementById('synthScreen').innerHTML = song;
 }))
 
 // Plays back the recorded notes
-document.querySelector('#playBack')?.addEventListener('click', async () => {
+document.querySelector('#playBack').addEventListener('click', async () => {
 	for (var i = 0; i < song.length; i++) {
 			synth.triggerAttackRelease(song[i], "8n");
 	    await timer(500)
@@ -78,8 +91,12 @@ document.querySelector('#playBack')?.addEventListener('click', async () => {
 })
 
 // Clears the song from the screen
-document.querySelector('#clear')?.addEventListener('click', () => {
+document.querySelector('#clear').addEventListener('click', () => {
 	song = []
+	localStorage.clear();
 	document.getElementById('synthScreen').innerHTML = song
 })
 
+let songStorage = document.getElementById('synthScreen').innerHTML
+songStorage = document.getElementById('synthScreen').innerHTML
+console.log(songStorage)
