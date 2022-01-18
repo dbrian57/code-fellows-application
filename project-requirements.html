@@ -3,7 +3,6 @@
   <head>
   <title>Project Requirements</title>
   <link rel="stylesheet" href="/src/styles/style.css">
-  <script src="/src/scripts/percentage.js"></script>
   </head>
 <body>
   <div id="projectSpace">
@@ -11,36 +10,78 @@
     <ul>
       <li class="listHeader">Good and proper use of HTML</li>
         <ul>
-          <li class="lineItem">Clear, readable, and efficient structure</li>
-          <li class="lineItem">Uses semantic markup whenever possible</li>
+          <li class="lineItem"><input  id="structure"  type="checkbox" class="userCheck" >
+            <label for="structure">Clear, readable, and efficient structure</label>
+          </li>
+          <li class="lineItem">
+            <input  id="markup"  type="checkbox" class="userCheck" >
+            <label for="markup">Uses semantic markup whenever possible</label>
+          </li>
         </ul>
       <li class="listHeader">Good and proper use of CSS</li>
         <ul>
-          <li class="lineItem">Clear, readable, and efficient styles</li>
-          <li class="lineItem">Appropriate page layout for desktop</li>
-          <li class="lineItem">Well-organized file structure</li>
-          <li class="lineItem">At least one CSS animation</li>
+          <li class="lineItem">
+            <input  id="styles"  type="checkbox" class="userCheck" >
+            <label for="styles">Clear, readable, and efficient styles</label>
+          </li>
+          <li class="lineItem">
+            <input  id="layout"  type="checkbox" class="userCheck" >
+            <label for="layout">Appropriate page layout for desktop</label>
+          </li>
+          <li class="lineItem">
+            <input  id="file-structure"  type="checkbox" class="userCheck" >
+            <label for="file-structure">Well-organized file structure</label>
+          </li>
+          <li class="lineItem">
+            <input  id="animation"  type="checkbox" class="userCheck" >
+            <label for="animation">At least one CSS animation</label>
+          </li>
         </ul>
     <li class="listHeader">Good and proper use of JavaScript</li>
       <ul>
-        <li class="lineItem">Clear, readable, and efficient code</li>
-        <li class="lineItem">Uses domain models to encapsulate data and behavior, such as objects and constructors</li>
-        <li class="lineItem">Responds to user events to receive/process user input and display new content to the user</li>
-        <li class="lineItem">Contains no unnecessary or commented-out code</li>
+        <li class="lineItem">
+          <input  id="efficient-code"  type="checkbox" class="userCheck" >
+          <label for="efficient-code">Clear, readable, and efficient code</label>
+        </li>
+        <li class="lineItem">
+          <input  id="domain-models"  type="checkbox" class="userCheck" >
+          <label for="domain-models">Uses domain models to encapsulate data and behavior, such as objects and constructors</label>
+        </li>
+        <li class="lineItem">
+          <input  id="input"  type="checkbox" class="userCheck" >
+          <label for="input">Responds to user events to receive/process user input and display new content to the user</label>
+        </li>
+        <li class="lineItem">
+          <input  id="comments"  type="checkbox" class="userCheck" >
+          <label for="comments">Contains no unnecessary or commented-out code</label>
+        </li>
       </ul>
     <li class="listHeader" >Generally useful and functional</li>
       <ul>
-        <li class="lineItem">Works as expected with no bugs</li>
-        <li class="lineItem">Has at least three distinct pages with clear navigation, one of which must be an “About Us” page</li>
-        <li class="lineItem">Has at least two pages that accept and process user input</li>
-        <li class="lineItem">State is persisted between page reloads</li>
-        <li class="lineItem">Deployed live on the Internet via GitHub Pages</li>
+        <li class="lineItem">
+          <input  id="bugs"  type="checkbox" class="userCheck" >
+          <label for="bugs">Works as expected with no bugs</label>
+        </li>
+        <li class="lineItem">
+          <input  id="navigation"  type="checkbox" class="userCheck" >
+          <label for="navigation">Has at least three distinct pages with clear navigation, one of which must be an “About Us” page</label>
+        </li>
+        <li class="lineItem">
+          <input  id="user-input"  type="checkbox" class="userCheck" >
+          <label for="user-input">Has at least two pages that accept and process user input</label>
+        </li>
+        <li class="lineItem">
+          <input  id="persists"  type="checkbox" class="userCheck" >
+          <label for="persists">State is persisted between page reloads</label>
+        </li>
+        <li class="lineItem">
+          <input  id="gh-pages"  type="checkbox" class="userCheck" >
+          <label for="gh-pages">Deployed live on the Internet via GitHub Pages</label>
+        </li>
       </ul>
     </ul>
+      <h1 id="percentage">0%</h1>
   </div>
-<input type="checkbox" name="coffee" value="10">With cream<br>
-<input type="checkbox" name="coffee" value="10">With sugar<br>
-  <h1 id="percentage">0%</h1>
   <footer>
   <table id="footer">
     <tr>
@@ -50,5 +91,25 @@
     </tr>
   </table>
   </footer>
+  <script>
+    let percentage = 0;
+    let finalPercentage = 0;
+
+    var checkboxes = document.querySelectorAll("input[type=checkbox]");
+
+    checkboxes.forEach(function(checkbox) {
+      checkbox.addEventListener('change', function() {
+        if (this.checked) {
+            percentage += 6.66;
+            finalPercentage = Math.round(percentage);
+            document.getElementById('percentage').innerHTML = finalPercentage + "%";
+        } else {
+          percentage -= 6.66;
+          finalPercentage = Math.round(percentage);
+          document.getElementById('percentage').innerHTML = finalPercentage + "%";
+        }
+      })
+    });
+  </script>
 </body>
 </html>

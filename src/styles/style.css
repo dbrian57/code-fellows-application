@@ -240,7 +240,7 @@ button:active {
 
 #projectSpace {
   margin-left: 20px;
-  height: 600px;
+  height: 700px;
 }
 
 ul {
@@ -256,5 +256,13 @@ ul {
 }
 
 .lineItem {
-  padding-left: 10px;
+  padding-left: 20px;
+}
+
+li {
+  list-style-type: none;
+}
+
+#percentage {
+  padding: 20px;
 }
