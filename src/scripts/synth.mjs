@@ -1,4 +1,4 @@
-import * as Tone from '/src/scripts/tone.js';
+import * as Tone from './src/scripts/tone.js';
 
 let song = [];
 

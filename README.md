@@ -1,6 +1,6 @@
 # code-fellows-application
 
-The `code-fellows-application` repo contains the source code and assets for web app deployed at [deadsimplesynth.com](https://deadsimplesynth.com). dead simple synth is a project that I produced to meet the admission requirements for the Code Fellows intermediate-level bootcamp.
+The `code-fellows-application` repo contains the source code and assets for the web app deployed at [deadsimplesynth.com](https://deadsimplesynth.com). dead simple synth is a project that I produced to meet the admission requirements for the Code Fellows intermediate-level bootcamp.
 
 The app contains a project requirements page, an "about me" page, and a hand-coded and designed synthesizer that utilizes the [Tone.js web audio framework](https://tonejs.github.io).
 
