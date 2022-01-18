@@ -6,4 +6,4 @@ The app contains a project requirements page, an "about me" page, and a hand-cod
 
 The synth allows you to click the keys of the keyboard and play the key's corresponding note just as you would on a piano or any other synthesizer. dead simple synth contains three octaves from the standard piano layout: octaves three, four, and five. Each time you press a key, the note plays and is recorded to the synth's screen. You can then playback the notes in the same sequence you played them.
 
-dead simple synth is continuously deployed using [DigitalOcean's App Platform](https://docs.digitalocean.com/products/app-platform).
+dead simple synth is continuously deployed at [deadsimplesynth.com](https://deadsimplesynth.com) using [DigitalOcean's App Platform](https://docs.digitalocean.com/products/app-platform). It is also deployed using [GitHub pages](https://dbrian57.github.io/code-fellows-application), although the code's paths are slightly different because of GitHub's preference for relative paths.
