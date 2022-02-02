@@ -106,6 +106,17 @@
       </div>
       </div>
     </keyboard>
+    <form id="saveSong">
+      <table id="tableForm">
+        <tr>
+          <td class="tableFormCell"><label class="formElement" for="username">Username:</label> <input type="text" name="username" id="username" required placeholder="Your name"></td>
+          <td class="tableFormCell"><label class="formElement" for="songTitle">Song Title:</label> <input type="text" name="songTitle" id="songTitle" required placeholder="Your song's title"></td>
+          <td class="tableFormCell"><input class="formElement" id="submitSong" type="button" value="Save Song"></td>
+          <td class="tableFormCell"><button onclick="location.href='saved-songs.html'" type="button">View Saved Songs</button></td>
+          <td class="tableFormCell" id="yourSongSaved"></td>
+        </tr>
+      </table>
+      </form>
     <div class="explainer" id="how-to">
       <h2>How to Play</h2>
       <p><strong>dead simple synth</strong> is a simple synthesizer that generates audio using
@@ -139,6 +150,7 @@
       <table id="footer">
         <tr>
           <td class="footerSpace"><a class="footerLinks" href="https://deadsimplesynth.com">Synth</a></td>
+          <td class="footerSpace"><a class="footerLinks" href="saved-songs.html">Saved Songs</a></td>
           <td class="footerSpace"><a class="footerLinks" href="project-requirements.html">Project Requirements</a></td>
           <td class="footerSpace"><a class="footerLinks" href="aboutme.html">About Me</a></td>
         </tr>

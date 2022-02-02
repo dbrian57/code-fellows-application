@@ -94,6 +94,30 @@ document.querySelector('#playBack').addEventListener('click', async () => {
 // Clears the song from the screen
 document.querySelector('#clear').addEventListener('click', () => {
 	song = [];
-	localStorage.clear();
+	localStorage.removeItem(songStorage);
 	document.getElementById('synthScreen').innerHTML = song;
 });
+
+// Creates a new user object and stores it in localStorage
+class User {
+  constructor(username, songTitle) {
+    this.username = username;
+    this.songTitle = songTitle;
+    this.songInput = song;
+  }
+  storeObject(username){
+    let key = username;
+    localStorage.setItem(key, JSON.stringify(this));
+  }
+}
+
+document.getElementById('submitSong').addEventListener('click', (e) => {
+  e.preventDefault();
+  let nameValue = document.getElementById('username').value;
+  let songValue = document.getElementById('songTitle').value;
+  let message = 'Your song was saved!'
+  new User(nameValue, songValue).storeObject(nameValue);
+  document.getElementById('username').value = '';
+  document.getElementById('songTitle').value = '';
+  document.getElementById('yourSongSaved').innerHTML = message;
+})
