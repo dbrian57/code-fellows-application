@@ -116,8 +116,13 @@ document.getElementById('submitSong').addEventListener('click', (e) => {
   let nameValue = document.getElementById('username').value;
   let songValue = document.getElementById('songTitle').value;
   let message = 'Your song was saved!'
+  
+  if (nameValue == 0 || songValue == 0 ) {
+    alert("You must enter text into the Username and Song Title fields before saving.")
+  } else {
   new User(nameValue, songValue).storeObject(nameValue);
   document.getElementById('username').value = '';
   document.getElementById('songTitle').value = '';
   document.getElementById('yourSongSaved').innerHTML = message;
+  }
 })
