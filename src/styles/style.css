@@ -266,3 +266,14 @@ li {
 #percentage {
   padding: 20px;
 }
+
+#tableForm {
+  position:absolute;
+  top: 600px;
+  margin-left: 20px;
+}
+
+.tableFormCell {
+  font-family: helvetica;
+  padding-right: 30px;
+}

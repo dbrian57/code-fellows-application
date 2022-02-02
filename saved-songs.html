@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Project Requirements</title>
+  <link rel="stylesheet" href="/src/styles/songStyle.css">
+  </head>
+<body>
+  <div id="projectSpace">
+    <h1>Saved Songs</h1>
+    <table id="userSongs">
+      <thead>
+        <tr>
+          <th class="userSongCell">Username</th>
+          <th class="userSongCell">Song Title</th>
+          <th class="userSongCell">Song Notes</th>
+        </tr>
+    </thead>
+      <tbody>  
+      </tbody>
+    </table>
+
+  <footer>
+    <table id="footer">
+      <tr>
+        <td class="footerSpace"><a class="footerLinks" href="https://deadsimplesynth.com">Synth</a></td>
+        <td class="footerSpace"><a class="footerLinks" href="saved-songs.html">Saved Songs</a></td>
+        <td class="footerSpace"><a class="footerLinks" href="project-requirements.html">Project Requirements</a></td>
+        <td class="footerSpace"><a class="footerLinks" href="aboutme.html">About Me</a></td>
+      </tr>
+    </table>
+  </footer>
+  </div>
+  <script>
+    for ( let i = 0, len = localStorage.length; i < len; ++i ) {
+      object = JSON.parse(localStorage.getItem(localStorage.key( i )))
+      if ( object.username != null) {
+          let username = object.username
+          let songTitle = object.songTitle
+          let song = object.songInput
+          let tableBody = document.getElementById('userSongs').getElementsByTagName('tbody')[0];
+
+          let newRow = tableBody.insertRow(-1);
+
+          let newCell1 = newRow.insertCell();
+          let newCell2 = newRow.insertCell();
+          let newCell3 = newRow.insertCell();
+
+          let userText = document.createTextNode(username);
+          let songTitleText = document.createTextNode(songTitle);
+          let songText = document.createTextNode(song);
+          
+          newCell1.appendChild(userText);
+          newCell2.appendChild(songTitleText);
+          newCell3.appendChild(songText);
+
+        }
+    }
+  </script>
+</body>
+</html>
