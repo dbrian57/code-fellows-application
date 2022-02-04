@@ -25,9 +25,9 @@ for ( let i = 0, len = localStorage.length; i < len; ++i ) {
       let btn = document.createElement("button");
       btn.innerHTML = "Play Song";
       btn.onclick = async () => {
-        	for (var i = 0; i < song.length; i++) {
-        			synth.triggerAttackRelease(song[i], "8n");
-        	    await timer(500);
+        for (var i = 0; i < song.length; i++) {
+        		synth.triggerAttackRelease(song[i], "8n");
+        	   await timer(500);
         	};
         };
       
